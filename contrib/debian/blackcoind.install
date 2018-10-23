@@ -1,0 +1,2 @@
+debian/bin/pyrited usr/bin
+src/pyrited usr/lib/pyrite

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pyrite
+Comment=Pyrite P2P Cryptocurrency
+Comment[fr]=Pyrite, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Pyrite, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/pyrite-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/pyrite;
+Categories=Office;
