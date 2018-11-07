@@ -1,4 +1,4 @@
-# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png"> Pyrite 1.0.0
+# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png">1.0.1
 ### Pyrite is a fairly launched, 100% decentralized cryptocurrency. Community involvement is encouraged. Pyrite, like most other altcoins, starts as an experiment - a fool's gold.
 
 ##### Ticker: PYE
@@ -17,10 +17,7 @@
 
 ##### Install dependencies for QT wallet:
 
-1. `sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
-    build-essential libboost-dev libboost-system-dev \
-    libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-    libssl-dev libdb++-dev libminiupnpc-dev libqrencode-dev`
+1. `sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqrencode-dev`
     
 2. `git clone https://github.com/pyritepirate/pyrite.git`
 
@@ -34,8 +31,10 @@
 
 1. `sudo apt-get install git build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev`
 
-2. `cd pyrite/src`
+2. `git clone https://github.com/pyritepirate/pyrite.git`
 
-3. `make -f makefile.unix`
+3. `cd pyrite/src`
+
+4. `make -f makefile.unix`
 
 ###  :mega: https://bitcointalk.org/index.php?topic=5055485
