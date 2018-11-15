@@ -9,10 +9,10 @@
 ##### Block Time: 10 Minutes (*effectively 5 minutes, since PoW and PoS blocks are targeted at 10 minutes*)
 ##### Block Maturity: 200 Blocks
 ##### Block Halving: Every 105120 Blocks
-##### Max supply: 21 Million*
+##### Max supply: 10 Million*
 ##### P2P Port: 6996
 ##### RPC Port: 6997
-:heavy_exclamation_mark:*Max supply approximation is based on the assumption that ratio of PoW to PoS blocks remains 50:50. This is an unlikely scenario, because PoS blocks are generated only if transactions are sent to the mempool. 
+:heavy_exclamation_mark:*Max supply approximation is based on the assumption that ratio of PoW to PoS blocks remains 50:50.
 ##### Building instructions for Ubuntu 16.04
 
 ##### Install dependencies for QT wallet:
