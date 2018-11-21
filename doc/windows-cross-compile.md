@@ -33,19 +33,8 @@ Add `MXE_TARGETS` so that we get 32-bit Windows binaries.
 $ make MXE_TARGETS='i686-w64-mingw32.static' cc
 $ make MXE_TARGETS='i686-w64-mingw32.static' qt
 $ make MXE_TARGETS='i686-w64-mingw32.static' qttools
+$ make MXE_TARGETS="i686-w64-mingw32.static" boost
 ```
-Build boost for windows
-```
-    $ wget https://downloads.sourceforge.net/project/boost/boost/1.63.0/boost_1_63_0.tar.bz2
-    $ tar -xjvf boost_1_63_0.tar.bz2
-    $ cd boost_1_63_0
-    $ ./bootstrap.sh --without-icu
-    $ echo "using gcc : mxe : i686-w64-mingw32.static-g++ : <rc>i686-w64-mingw32.static-windres <archiver>i686-w64-mingw32.static-ar <ranlib>i686-w64-mingw32.static-ranlib ;" > user-config.jam
-    $ export PATH=/mnt/mxe/usr/bin:$PATH  // to avoid this error i686-w64-mingw32.static-g++' not found
-    $ ./b2 toolset=gcc address-model=32 target-os=windows variant=release threading=multi threadapi=win32 link=static runtime-link=static --prefix=/mnt/mxe/usr/i686-w64-mingw32.static --user-config=user-config.jam --without-mpi --without-python -sNO_BZIP2=1 --layout=tagged install
-    $ cd ..
- ```
-
 Build OpenSSL for windows (version 1.1.x doesn't work)
 ```
     $ wget https://www.openssl.org/source/openssl-1.0.2d.tar.gz
