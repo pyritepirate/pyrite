@@ -419,7 +419,7 @@
       <bool>false</bool>
      </property>
      <property name="columnCount">
-      <number>11</number>
+      <number>9</number>
      </property>
      <attribute name="headerShowSortIndicator" stdset="0">
       <bool>true</bool>
@@ -458,11 +458,6 @@
       </property>
       <property name="toolTip">
        <string>Confirmed</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Priority</string>
       </property>
      </column>
      <column>
