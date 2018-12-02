@@ -13,6 +13,7 @@
 #include <QUrl>
 #include <QScrollBar>
 #include <QStringList>
+#include <QAbstractItemView>
 
 #include <openssl/crypto.h>
 
