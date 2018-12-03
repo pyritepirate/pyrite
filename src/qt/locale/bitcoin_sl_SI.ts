@@ -1791,8 +1791,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Pyrite naslov (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Vnesite Pyrite naslov (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1924,7 +1924,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1965,8 +1965,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Pyrite naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Vnesite Pyrite naslov (npr. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
 </context>
 <context>
@@ -1989,8 +1989,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Naslov s katerim želite podpisati sporočilo (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Naslov s katerim želite podpisati sporočilo (npr. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2053,8 +2053,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Naslov s katerim je bilo podpisano sporočilo (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Naslov s katerim je bilo podpisano sporočilo (npr. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2069,8 +2069,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Vnesite Pyrite naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Vnesite Pyrite naslov (npr. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="-2"/>

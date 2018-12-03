@@ -1793,8 +1793,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introduceți o adresă Pyrite(ex:B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Introduceți o adresă Pyrite(ex:PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1926,7 +1926,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1967,8 +1967,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introduceți o adresă Pyrite(ex:B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Introduceți o adresă Pyrite(ex:PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
 </context>
 <context>
@@ -1991,8 +1991,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adresa cu care semnati mesajul(ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Adresa cu care semnati mesajul(ex. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2055,8 +2055,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adresa cu care a fost semnat mesajul(ex. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Adresa cu care a fost semnat mesajul(ex. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2071,8 +2071,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Introduceți o adresă Pyrite(ex:B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Introduceți o adresă Pyrite(ex:PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="-2"/>

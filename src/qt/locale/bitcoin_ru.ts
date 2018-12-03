@@ -1779,8 +1779,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите Pyrite-адрес (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Введите Pyrite-адрес (например PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1912,8 +1912,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес получателя платежа (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to send the payment to (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Адрес получателя платежа (например PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1953,8 +1953,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите Pyrite-адрес (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Введите Pyrite-адрес (например PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
 </context>
 <context>
@@ -1977,8 +1977,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес, которым вы хотите подписать сообщение  (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Адрес, которым вы хотите подписать сообщение  (напр. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2041,8 +2041,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес, которым было подписано сообщение (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Адрес, которым было подписано сообщение (напр. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2057,8 +2057,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Pyrite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите адрес Pyrite (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Pyrite address (e.g. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</source>
+        <translation>Введите адрес Pyrite (напр. PQAywd4dL1MeABQvEdoJgo98oBiMZL23mt)</translation>
     </message>
     <message>
         <location line="-2"/>
