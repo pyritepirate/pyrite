@@ -25,6 +25,7 @@ int64_t nMinimumInputValue = 0;
 
 static int64_t GetStakeCombineThreshold() { return 100 * COIN; }
 static int64_t GetStakeSplitThreshold() { return 2 * GetStakeCombineThreshold(); }
+extern vector<CKeyID> vChangeAddresses;
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -1455,6 +1456,13 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend, 
                     // coin control: send change to custom address
                     if (coinControl && !boost::get<CNoDestination>(&coinControl->destChange))
                         scriptChange.SetDestination(coinControl->destChange);
+
+                    // send change to one of the specified change addresses, if specified at init
+                    else if (vChangeAddresses.size())
+                    {
+                        CKeyID keyID = vChangeAddresses[GetRandInt(vChangeAddresses.size())];
+                        scriptChange.SetDestination(keyID);
+                    }
 
                     // no coin control: send change to newly generated address
                     else
