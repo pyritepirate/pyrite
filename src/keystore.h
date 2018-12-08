@@ -22,6 +22,7 @@ public:
 
     // Add a key to the store.
     virtual bool AddKeyPubKey(const CKey &key, const CPubKey &pubkey) =0;
+    virtual bool RemovePubKey(const CPubKey &pubkey) =0;
     virtual bool AddKey(const CKey &key);
 
     // Check whether a key corresponding to a given address is present in the store.
@@ -48,6 +49,7 @@ protected:
 
 public:
     bool AddKeyPubKey(const CKey& key, const CPubKey &pubkey);
+    bool RemovePubKey(const CPubKey &pubkey);
     bool HaveKey(const CKeyID &address) const
     {
         bool result;

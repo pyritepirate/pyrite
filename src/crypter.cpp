@@ -212,6 +212,19 @@ bool CCryptoKeyStore::AddKeyPubKey(const CKey& key, const CPubKey &pubkey)
     return true;
 }
 
+bool CCryptoKeyStore::RemovePubKey(const CPubKey &pubkey)
+{
+    {
+        LOCK(cs_KeyStore);
+        if (!IsCrypted())
+            return CBasicKeyStore::RemovePubKey(pubkey);
+        if (IsLocked())
+            return false;
+        if (!RemoveCryptedKey(pubkey))
+            return false;
+    }
+    return true;
+}
 
 bool CCryptoKeyStore::AddCryptedKey(const CPubKey &vchPubKey, const std::vector<unsigned char> &vchCryptedSecret)
 {
@@ -221,6 +234,17 @@ bool CCryptoKeyStore::AddCryptedKey(const CPubKey &vchPubKey, const std::vector<
             return false;
 
         mapCryptedKeys[vchPubKey.GetID()] = make_pair(vchPubKey, vchCryptedSecret);
+    }
+    return true;
+}
+
+bool CCryptoKeyStore::RemoveCryptedKey(const CPubKey &vchPubKey)
+{
+    {
+        LOCK(cs_KeyStore);
+        if (!SetCrypted())
+            return false;
+        mapCryptedKeys.erase(vchPubKey.GetID());
     }
     return true;
 }

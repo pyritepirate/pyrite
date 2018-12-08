@@ -157,6 +157,37 @@ Value importprivkey(const Array& params, bool fHelp)
     return Value::null;
 }
 
+Value deleteprivkey(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
+            "deleteprivkey <address>\n"
+            "Irreversibly deletes the private key corresponding to the given address from your wallet.\n"
+	        "Be very careful!\n");
+    EnsureWalletIsUnlocked();
+    string strAddress = params[0].get_str();
+    CKeyID vchAddress;
+    CPubKey vchPubKey;
+    if (!CBitcoinAddress(strAddress).GetKeyID(vchAddress))
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
+    if (fWalletUnlockStakingOnly)
+        throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Wallet is unlocked for staking only.");
+    {
+        LOCK2(cs_main, pwalletMain->cs_wallet);
+        if (!pwalletMain->HaveKey(vchAddress))
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "We don't have the private key for that address");
+        if (!pwalletMain->GetPubKey(vchAddress, vchPubKey))
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Can't find pubkey for that address");
+            
+        pwalletMain->MarkDirty();
+        pwalletMain->DelAddressBookName(vchAddress);
+        pwalletMain->mapKeyMetadata.erase(vchAddress);
+        pwalletMain->RemovePubKey(vchPubKey);
+        pwalletMain->TidyWalletTransactions();
+    }
+    return Value::null;
+}
+
 Value importwallet(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)

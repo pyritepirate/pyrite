@@ -80,6 +80,16 @@ bool CWallet::AddKeyPubKey(const CKey& secret, const CPubKey &pubkey)
     return true;
 }
 
+bool CWallet::RemovePubKey(const CPubKey &pubkey)
+{
+    AssertLockHeld(cs_wallet); // mapKeyMetadata
+    if (!CCryptoKeyStore::RemovePubKey(pubkey))
+        return false;
+    if (!fFileBacked) 
+        return true;
+    return CWalletDB(strWalletFile).EraseKey(pubkey);
+}
+
 bool CWallet::AddCryptedKey(const CPubKey &vchPubKey, const vector<unsigned char> &vchCryptedSecret)
 {
     if (!CCryptoKeyStore::AddCryptedKey(vchPubKey, vchCryptedSecret))
@@ -1027,10 +1037,21 @@ void CWallet::ResendWalletTransactions(bool fForce)
     }
 }
 
-
-
-
-
+void CWallet::TidyWalletTransactions()
+{
+    vector<uint256> vHashes;
+    for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
+    {
+        const CWalletTx* pcoin = &(*it).second;
+        if (!IsMine(*pcoin) && !IsFromMe(*pcoin))
+            vHashes.push_back(pcoin->GetHash());
+    }
+    BOOST_FOREACH(uint256& hash, vHashes)
+    {
+        EraseFromWallet(hash);
+        NotifyTransactionChanged(this, hash, CT_DELETED);
+    }
+}
 
 //////////////////////////////////////////////////////////////////////////////
 //
