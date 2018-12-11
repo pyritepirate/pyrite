@@ -1342,6 +1342,7 @@ Value walletpassphrase(const Array& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase <passphrase> <timeout> [stakingonly]\n"
             "Stores the wallet decryption key in memory for <timeout> seconds.\n"
+            "A timeout of \"0\" unlocks until the wallet is closed.\n"
             "if [stakingonly] is true sending functions are disabled.");
     if (fHelp)
         return true;
@@ -1372,7 +1373,11 @@ Value walletpassphrase(const Array& params, bool fHelp)
     int64_t nSleepTime = params[1].get_int64();
     LOCK(cs_nWalletUnlockTime);
     nWalletUnlockTime = GetTime() + nSleepTime;
-    RPCRunLater("lockwallet", boost::bind(LockWallet, pwalletMain), nSleepTime);
+    
+    if (nSleepTime > 0) {
+        nWalletUnlockTime = GetTime () + nSleepTime;
+        RPCRunLater ("lockwallet", boost::bind (LockWallet, pwalletMain), nSleepTime);
+    }
 
     // ppcoin: if user OS account compromised prevent trivial sendmoney commands
     if (params.size() > 2)
