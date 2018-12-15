@@ -1936,6 +1936,20 @@ int GetBlockRatePerHour()
     return nRate;
 }
 
+// Get the block rate for one day
+int GetBlockRatePerDay()
+{
+    int nRate = 0;
+    CBlockIndex* pindex = pindexBest;
+    int64_t nTargetTime = GetAdjustedTime() - 86400;
+
+    while (pindex && pindex->pprev && pindex->nTime > nTargetTime) {
+        nRate += 1;
+        pindex = pindex->pprev;
+    }
+    return nRate;
+}
+
 bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) const
 {
     // These are checks that are independent of context
