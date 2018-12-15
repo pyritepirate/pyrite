@@ -1922,8 +1922,19 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos, const u
     return true;
 }
 
+// Get the block rate for one hour
+int GetBlockRatePerHour()
+{
+    int nRate = 0;
+    CBlockIndex* pindex = pindexBest;
+    int64_t nTargetTime = GetAdjustedTime() - 3600;
 
-
+    while (pindex && pindex->pprev && pindex->nTime > nTargetTime) {
+        nRate += 1;
+        pindex = pindex->pprev;
+    }
+    return nRate;
+}
 
 bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) const
 {

@@ -58,7 +58,8 @@ Value getinfo(const Array& params, bool fHelp)
     diff.push_back(Pair("proof-of-work",  GetDifficulty()));
     diff.push_back(Pair("proof-of-stake", GetDifficulty(GetLastBlockIndex(pindexBest, true))));
     obj.push_back(Pair("difficulty",    diff));
-
+    obj.push_back(Pair("blocksperhour", GetBlockRatePerHour()));
+    
     obj.push_back(Pair("testnet",       TestNet()));
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
