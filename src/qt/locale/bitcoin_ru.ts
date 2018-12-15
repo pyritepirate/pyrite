@@ -1260,8 +1260,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation>Использовать чёрную тему оформления (требуется перезапуск)</translation>
+        <source>Use dark visual theme (requires restart)</source>
+        <translation>Использовать темный тему оформления (требуется перезапуск)</translation>
     </message>
     <message>
         <location line="+71"/>

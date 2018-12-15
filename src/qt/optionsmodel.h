@@ -3,7 +3,7 @@
 
 #include <QAbstractListModel>
 
-extern bool fUseBlackTheme;
+extern bool fUseDarkTheme;
 
 /** Interface from Qt to configuration data structure for Bitcoin client.
    To Qt, the options are presented as a list with the different options
@@ -31,7 +31,7 @@ public:
         DisplayUnit,       // BitcoinUnits::Unit
         Language,          // QString
         CoinControlFeatures, // bool
-        UseBlackTheme,     // bool
+        UseDarkTheme,     // bool
         OptionIDRowCount,
     };
 

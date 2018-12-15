@@ -1011,20 +1011,20 @@ qrc_bitcoin.cpp: src/qt/bitcoin.qrc \
 		src/qt/res/icons/send.png \
 		src/qt/res/icons/editpaste.png \
 		src/qt/res/icons/lock_closed.png \
-		src/qt/res/icons/black/connect1_16.png \
-		src/qt/res/icons/black/tx_output.png \
-		src/qt/res/icons/black/connect2_16.png \
-		src/qt/res/icons/black/connect3_16.png \
-		src/qt/res/icons/black/connect4_16.png \
-		src/qt/res/icons/black/tx_inout.png \
-		src/qt/res/icons/black/lock_open.png \
-		src/qt/res/icons/black/synced.png \
-		src/qt/res/icons/black/tx_mined.png \
-		src/qt/res/icons/black/tx_input.png \
-		src/qt/res/icons/black/lock_closed.png \
-		src/qt/res/icons/black/staking_off.png \
-		src/qt/res/icons/black/staking_on.png \
-		src/qt/res/icons/black/connect0_16.png
+		src/qt/res/icons/dark/connect1_16.png \
+		src/qt/res/icons/dark/tx_output.png \
+		src/qt/res/icons/dark/connect2_16.png \
+		src/qt/res/icons/dark/connect3_16.png \
+		src/qt/res/icons/dark/connect4_16.png \
+		src/qt/res/icons/dark/tx_inout.png \
+		src/qt/res/icons/dark/lock_open.png \
+		src/qt/res/icons/dark/synced.png \
+		src/qt/res/icons/dark/tx_mined.png \
+		src/qt/res/icons/dark/tx_input.png \
+		src/qt/res/icons/dark/lock_closed.png \
+		src/qt/res/icons/dark/staking_off.png \
+		src/qt/res/icons/dark/staking_on.png \
+		src/qt/res/icons/dark/connect0_16.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name bitcoin src/qt/bitcoin.qrc -o qrc_bitcoin.cpp
 
 compiler_moc_header_make_all: build/moc_bitcoingui.cpp build/moc_transactiontablemodel.cpp build/moc_addresstablemodel.cpp build/moc_optionsdialog.cpp build/moc_coincontroldialog.cpp build/moc_coincontroltreewidget.cpp build/moc_sendcoinsdialog.cpp build/moc_addressbookpage.cpp build/moc_signverifymessagedialog.cpp build/moc_aboutdialog.cpp build/moc_editaddressdialog.cpp build/moc_bitcoinaddressvalidator.cpp build/moc_clientmodel.cpp build/moc_guiutil.cpp build/moc_optionsmodel.cpp build/moc_monitoreddatamapper.cpp build/moc_trafficgraphwidget.cpp build/moc_transactiondesc.cpp build/moc_transactiondescdialog.cpp build/moc_bitcoinamountfield.cpp build/moc_transactionfilterproxy.cpp build/moc_transactionview.cpp build/moc_walletmodel.cpp build/moc_overviewpage.cpp build/moc_csvmodelwriter.cpp build/moc_sendcoinsentry.cpp build/moc_qvalidatedlineedit.cpp build/moc_bitcoinunits.cpp build/moc_qvaluecombobox.cpp build/moc_askpassphrasedialog.cpp build/moc_notificator.cpp build/moc_paymentserver.cpp build/moc_rpcconsole.cpp

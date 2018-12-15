@@ -1272,7 +1272,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
+        <source>Use dark visual theme (requires restart)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2669,7 +2669,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="+1"/>
         <source>Send command to -server or pyrited</source>
-        <translation>Pošlji ukaz na -server ali blackoind</translation>
+        <translation>Pošlji ukaz na -server ali pyrited</translation>
     </message>
     <message>
         <location line="+1"/>

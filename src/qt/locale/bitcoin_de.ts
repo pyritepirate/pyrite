@@ -1264,8 +1264,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation>Verwende das schwarze Pyrite Wallet Design (Neustart erforderlich)</translation>
+        <source>Use dark visual theme (requires restart)</source>
+        <translation>Verwende das dunkel Pyrite Wallet Design (Neustart erforderlich)</translation>
     </message>
     <message>
         <location line="+71"/>

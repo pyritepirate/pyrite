@@ -1279,8 +1279,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation>Siyah görsel temayı kullan (baştan başlatmayı gerektirir)</translation>
+        <source>Use dark visual theme (requires restart)</source>
+        <translation>Karanlık görsel temayı kullan (baştan başlatmayı gerektirir)</translation>
     </message>
     <message>
         <location line="+71"/>
