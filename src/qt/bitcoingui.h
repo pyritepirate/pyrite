@@ -73,6 +73,7 @@ private:
     QLabel *labelBlocksIcon;
     QLabel *progressBarLabel;
     QProgressBar *progressBar;
+    QLabel *transactionSum;
 
     QMenuBar *appMenuBar;
     QAction *overviewAction;
@@ -133,6 +134,10 @@ public slots:
        @param[in] style     style definitions (icon and used buttons - buttons only for message boxes)
                             @see CClientUIInterface::MessageBoxFlags
     */
+
+    /** Update selected PYE amount from transactionview */
+    void trxAmount(QString amount);
+
     void message(const QString &title, const QString &message, bool modal, unsigned int style);
     /** Asks the user whether to pay the transaction fee or to cancel the transaction.
        It is currently not possible to pass a return value to another thread through

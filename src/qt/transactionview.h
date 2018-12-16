@@ -13,6 +13,7 @@ class QLineEdit;
 class QModelIndex;
 class QMenu;
 class QFrame;
+class QItemSelectionModel;
 class QDateTimeEdit;
 QT_END_NAMESPACE
 
@@ -70,6 +71,7 @@ private slots:
 
 signals:
     void doubleClicked(const QModelIndex&);
+    void trxAmount(QString amount);
 
 public slots:
     void chooseDate(int idx);
@@ -78,6 +80,7 @@ public slots:
     void changedAmount(const QString &amount);
     void exportClicked();
     void focusTransaction(const QModelIndex&);
+    void computeSum();
 
 };
 

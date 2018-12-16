@@ -109,8 +109,21 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
+    QHBoxLayout *hbox_buttons = new QHBoxLayout();
     transactionView = new TransactionView(this);
     vbox->addWidget(transactionView);
+    hbox_buttons->addStretch();
+
+    // Sum of selected transactions
+    QLabel *transactionSumLabel = new QLabel(); // Label
+    transactionSumLabel->setText("Selected Amount: ");
+    hbox_buttons->addWidget(transactionSumLabel);
+    
+    transactionSum = new QLabel(); // Amount
+    transactionSum->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    hbox_buttons->addWidget(transactionSum);
+
+    vbox->addLayout(hbox_buttons);
     transactionsPage->setLayout(vbox);
 
     addressBookPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::SendingTab);
@@ -202,6 +215,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     // Double-clicking on a transaction on the transaction history page shows details
     connect(transactionView, SIGNAL(doubleClicked(QModelIndex)), transactionView, SLOT(showDetails()));
+
+    // Update wallet with sum of selected transactions
+    connect(transactionView, SIGNAL(trxAmount(QString)), this, SLOT(trxAmount(QString)));
 
     rpcConsole = new RPCConsole(this);
     connect(openRPCConsoleAction, SIGNAL(triggered()), rpcConsole, SLOT(show()));
@@ -633,6 +649,11 @@ void BitcoinGUI::setNumBlocks(int count)
     progressBar->setToolTip(tooltip);
 
     statusBar()->setVisible(fShowStatusBar);
+}
+
+void BitcoinGUI::trxAmount(QString amount)
+{
+    transactionSum->setText(amount);
 }
 
 void BitcoinGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
