@@ -1,4 +1,4 @@
-# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png">1.0.2
+# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png">1.0.3
 ### Pyrite is a fairly launched, 100% decentralized cryptocurrency. Community involvement is encouraged. Pyrite, like most other altcoins, starts as an experiment - a fool's gold.
 
 ###  :globe_with_meridians: https://pyrite.pw
