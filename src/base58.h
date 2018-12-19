@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin Developers
+// Copyright (c) 2018-2019 The Pyrite Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +53,11 @@ inline std::string EncodeBase58(const unsigned char* pbegin, const unsigned char
     CBigNum rem;
     while (bn > bn0)
     {
+#if OPENSSL_VERSION_NUMBER < 0x10100000
         if (!BN_div(&dv, &rem, &bn, &bn58, pctx))
+#else
+        if (!BN_div(dv.bn, rem.bn, bn.bn, bn58.bn, pctx))
+#endif
             throw bignum_error("EncodeBase58 : BN_div failed");
         bn = dv;
         unsigned int c = rem.getulong();
@@ -99,7 +104,11 @@ inline bool DecodeBase58(const char* psz, std::vector<unsigned char>& vchRet)
             break;
         }
         bnChar.setulong(p1 - pszBase58);
+#if OPENSSL_VERSION_NUMBER < 0x10100000
         if (!BN_mul(&bn, &bn, &bn58, pctx))
+#else
+        if (!BN_mul(bn.bn, bn.bn, bn58.bn, pctx))
+#endif
             throw bignum_error("DecodeBase58 : BN_mul failed");
         bn += bnChar;
     }
