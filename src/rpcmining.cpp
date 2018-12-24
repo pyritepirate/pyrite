@@ -12,6 +12,9 @@
 #include "miner.h"
 #include "kernel.h"
 
+#include <memory>
+
+#include <boost/config.hpp>
 #include <boost/assign/list_of.hpp>
 
 using namespace json_spirit;
@@ -252,7 +255,11 @@ Value checkkernel(const Array& params, bool fHelp)
         return result;
 
     int64_t nFees;
+#ifndef BOOST_NO_CXX11_SMART_PTR
+    unique_ptr<CBlock> pblock(CreateNewBlock(*pMiningKey, true, &nFees));
+#else
     auto_ptr<CBlock> pblock(CreateNewBlock(*pMiningKey, true, &nFees));
+#endif
 
     pblock->nTime = pblock->vtx[0].nTime = nTime;
 

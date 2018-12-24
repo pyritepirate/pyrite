@@ -8,6 +8,10 @@
 #include "miner.h"
 #include "kernel.h"
 
+#include <memory>
+
+#include <boost/config.hpp>
+
 using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
@@ -88,7 +92,11 @@ public:
 CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFees)
 {
     // Create new block
+#ifndef BOOST_NO_CXX11_SMART_PTR
+    unique_ptr<CBlock> pblock(new CBlock());
+#else
     auto_ptr<CBlock> pblock(new CBlock());
+#endif
     if (!pblock.get())
         return NULL;
 
@@ -517,7 +525,11 @@ void ThreadStakeMiner(CWallet *pwallet)
         // Create new block
         //
         int64_t nFees;
+#ifndef BOOST_NO_CXX11_SMART_PTR
+        unique_ptr<CBlock> pblock(CreateNewBlock(reservekey, true, &nFees));
+#else
         auto_ptr<CBlock> pblock(CreateNewBlock(reservekey, true, &nFees));
+#endif    
         if (!pblock.get())
             return;
 
@@ -567,7 +579,11 @@ void static BitcoinMiner(CWallet *pwallet)
         CBlockIndex* pindexPrev = pindexBest;
 
         int64_t nFees;
+#ifndef BOOST_NO_CXX11_SMART_PTR
+        unique_ptr<CBlock> pblocktemplate(CreateNewBlock(reservekey, false, &nFees));
+#else
         auto_ptr<CBlock> pblocktemplate(CreateNewBlock(reservekey, false, &nFees));
+#endif
         if (!pblocktemplate.get())
             return;
 	      CBlock *pblock = pblocktemplate.get();
