@@ -342,12 +342,17 @@ void RPCConsole::clear()
                 "td.message { font-family: Monospace; font-size: 12px; } "
                 "td.cmd-request { color: #00C0C0; } "
                 "td.cmd-error { color: red; } "
+                ".secwarning { color: red; }"
                 "b { color: #00C0C0; } "
                 );
 
     message(CMD_REPLY, (tr("Welcome to the Pyrite RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
-                        tr("Type <b>help</b> for an overview of available commands.")), true);
+                        tr("Type <b>help</b> for an overview of available commands.")) +
+                        "<br><span class=\"secwarning\">" +
+                        tr("WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.") +
+                        "</span>",
+                        true);
 }
 
 void RPCConsole::message(int category, const QString &message, bool html)
