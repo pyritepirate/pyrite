@@ -551,8 +551,6 @@ void ThreadStakeMiner(CWallet *pwallet)
 //
 // Internal miner
 //
-double dHashesPerSec = 0.0;
-int64_t nHPSTimerStart = 0;
 
 void static BitcoinMiner(CWallet *pwallet)
 {
@@ -611,30 +609,6 @@ void static BitcoinMiner(CWallet *pwallet)
                 break;
             }
 	    ++pblock->nNonce;
-
-            // Meter hashes/sec
-            static int64_t nHashCounter;
-            if (nHPSTimerStart == 0)
-            {
-                nHPSTimerStart = GetTimeMillis();
-                nHashCounter = 0;
-            }
-            else
-                nHashCounter += nHashesDone;
-            if (GetTimeMillis() - nHPSTimerStart > 4000)
-            {
-                static CCriticalSection cs;
-                {
-                    LOCK(cs);
-                    if (GetTimeMillis() - nHPSTimerStart > 4000)
-                    {
-                        dHashesPerSec = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
-                        nHPSTimerStart = GetTimeMillis();
-                        nHashCounter = 0;
-                        LogPrintf("hashmeter %6.0f khash/s\n", dHashesPerSec/1000.0);
-                    }
-                }
-            }
 
             // Check for stop or if block needs to be rebuilt
             boost::this_thread::interruption_point();
