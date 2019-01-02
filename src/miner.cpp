@@ -597,7 +597,6 @@ void static BitcoinMiner(CWallet *pwallet)
 
         while (true)
         {
-            unsigned int nHashesDone = 0;
             hash = pblock->GetHash();
 
             if (hash <= hashTarget)
