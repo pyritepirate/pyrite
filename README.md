@@ -20,7 +20,7 @@
 #### P2P Port: 6996
 #### RPC Port: 6997
 :heavy_exclamation_mark:_*Max supply approximation is based on the assumption that ratio of PoW to PoS blocks remains 50:50._
-### Building instructions for Ubuntu 16.04
+### Building instructions for Ubuntu
 
 #### Install dependencies for QT wallet:
 
