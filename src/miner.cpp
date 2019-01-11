@@ -514,7 +514,7 @@ void ThreadStakeMiner(CWallet *pwallet)
         if (fTryToSync)
         {
             fTryToSync = false;
-            if (vNodes.size() < 3 || pindexBest->GetBlockTime() < GetTime() - 10 * 60)
+            if (vNodes.size() < 5 || pindexBest->GetBlockTime() < GetTime() - 10 * 60)
             {
                 MilliSleep(60000);
                 continue;
