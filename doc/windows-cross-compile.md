@@ -17,7 +17,7 @@ http://mxe.cc/#requirements-debian
     
 install cross compile environment
 Install mxe dependencies:
-  ```$  apt-get install p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin libgtk2.0-dev```
+  ```$  apt-get install p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip lzip wget xz-utils libtool-bin libgtk2.0-dev```
   
   For 64-bit Ubuntu also install:
   
@@ -35,17 +35,6 @@ $ make MXE_TARGETS='i686-w64-mingw32.static' qt
 $ make MXE_TARGETS='i686-w64-mingw32.static' qttools
 $ make MXE_TARGETS="i686-w64-mingw32.static" boost
 ```
-Build OpenSSL for windows (version 1.1.x doesn't work)
-```
-    $ wget https://www.openssl.org/source/openssl-1.0.2d.tar.gz
-    $ tar -xzvf openssl-1.0.2d.tar.gz
-    $ cp -R openssl-1.0.2d openssl-win32-build
-    $ cd openssl-win32-build
-    $ CROSS_COMPILE="i686-w64-mingw32.static-" ./Configure mingw no-asm no-shared --prefix=/mnt/mxe/usr/i686-w64-mingw32.static
-    $ make
-    $  make install
-    $ cd ..
- ```
     
 Compiling berkley db:
 Download and unpack berkeley db:
