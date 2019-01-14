@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = pyrite-qt
-VERSION = 1.0.3
+VERSION = 1.0.4
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += ENABLE_WALLET
