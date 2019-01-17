@@ -24,22 +24,46 @@
 
 #### Install dependencies for QT wallet:
 
-1. `$ sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqrencode-dev`
-    
-2. `$ git clone https://github.com/pyritepirate/pyrite.git`
+  `$ sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libminiupnpc-dev libqrencode-dev`
 
-3. `$ cd pyrite`
+#### Download and install Berkeley DB 6.2.32:
 
-4. `$ qmake`
+1. `$ wget http://download.oracle.com/berkeley-db/db-6.2.32.tar.gz`
 
-5. `$ make`
+2. `$ tar -xzvf db-6.2.32.tar.gz && cd db-6.2.32/build_unix`
+
+3. `$ ../dist/configure --prefix=/usr --enable-cxx --without-shared`
+
+4. `$ make`
+
+5. `$ sudo make install`
+
+#### Clone Pyrite and build QT wallet:
+
+1. `$ git clone https://github.com/pyritepirate/pyrite.git && cd pyrite`
+
+2. `$ qmake`
+
+3. `$ make`
 
 #### Install dependencies for headless client:
 
-1. `$ sudo apt-get install git build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev`
+   `$ sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev`
+   
+#### Download and install Berkeley DB 6.2.32:
 
-2. `$ git clone https://github.com/pyritepirate/pyrite.git`
+1. `$ wget http://download.oracle.com/berkeley-db/db-6.2.32.tar.gz`
 
-3. `$ cd pyrite/src`
+2. `$ tar -xzvf db-6.2.32.tar.gz && cd db-6.2.32/build_unix`
 
-4. `$ make -f makefile.unix`
+3. `$ ../dist/configure --prefix=/usr/local --enable-cxx --with-static`
+
+4. `$ make`
+
+5. `$ sudo make install`
+
+#### Clone Pyrite and build headless client:
+
+1. `$ git clone https://github.com/pyritepirate/pyrite.git && cd pyrite/src`
+
+2. `$ make -f makefile.unix`
