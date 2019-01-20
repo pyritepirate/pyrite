@@ -32,7 +32,7 @@
 
 2. `$ tar -xzvf db-6.2.32.tar.gz && cd db-6.2.32/build_unix`
 
-3. `$ ../dist/configure --prefix=/usr --enable-cxx --without-shared`
+3. `$ ../dist/configure --enable-cxx --without-shared`
 
 4. `$ make`
 
@@ -56,7 +56,7 @@
 
 2. `$ tar -xzvf db-6.2.32.tar.gz && cd db-6.2.32/build_unix`
 
-3. `$ ../dist/configure --prefix=/usr/local --enable-cxx --with-static`
+3. `$ ../dist/configure --enable-cxx --without-shared`
 
 4. `$ make`
 
