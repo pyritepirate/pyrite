@@ -504,7 +504,7 @@ void ThreadStakeMiner(CWallet *pwallet)
             MilliSleep(1000);
         }
 
-        while (vNodes.empty() || IsInitialBlockDownload())
+        while (vNodes.size() < 5 || IsInitialBlockDownload())
         {
             nLastCoinStakeSearchInterval = 0;
             fTryToSync = true;
@@ -516,7 +516,7 @@ void ThreadStakeMiner(CWallet *pwallet)
             fTryToSync = false;
             if (vNodes.size() < 5 || pindexBest->GetBlockTime() < GetTime() - 10 * 60)
             {
-                MilliSleep(60000);
+                MilliSleep(10000);
                 continue;
             }
         }
