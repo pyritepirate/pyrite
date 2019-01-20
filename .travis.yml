@@ -4,7 +4,14 @@ dist: trusty
 sudo: required
 
 install:
-- sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqrencode-dev
+- sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libminiupnpc-dev libqrencode-dev
+
+- wget http://download.oracle.com/berkeley-db/db-6.2.32.tar.gz
+- tar -xzvf db-6.2.32.tar.gz && cd db-6.2.32/build_unix
+- ../dist/configure --enable-cxx --without-shared
+- make
+- sudo make install
 
 script:
+- cd /home/travis/build/pyritepirate/pyrite/
 - qmake && make
