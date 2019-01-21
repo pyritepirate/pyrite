@@ -38,6 +38,10 @@
 
 5. `$ sudo make install`
 
+4. `$ sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb-6.2.so /usr/lib/libdb-6.2.so`
+
+5. `$ sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb_cxx-6.2.so /usr/lib/libdb_cxx-6.2.so`
+
 #### Clone Pyrite and build QT wallet:
 
 1. `$ git clone https://github.com/pyritepirate/pyrite.git && cd pyrite`
@@ -61,6 +65,10 @@
 4. `$ make`
 
 5. `$ sudo make install`
+
+4. `$ sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb-6.2.so /usr/lib/libdb-6.2.so`
+
+5. `$ sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb_cxx-6.2.so /usr/lib/libdb_cxx-6.2.so`
 
 #### Clone Pyrite and build headless client:
 

@@ -23,6 +23,10 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
+BDB_INCLUDE_PATH = /usr/local/BerkeleyDB.6.2/include
+BDB_LIB_PATH = /usr/local/BerkeleyDB.6.2/lib
+BDB_LIB_SUFFIX = -6.2
+
 OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build

@@ -11,6 +11,8 @@ install:
 - ../dist/configure --enable-cxx --without-shared
 - make
 - sudo make install
+- sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb-6.2.so /usr/lib/libdb-6.2.so
+- sudo ln -s /usr/local/BerkeleyDB.6.2/lib/libdb_cxx-6.2.so /usr/lib/libdb_cxx-6.2.so
 
 script:
 - cd /home/travis/build/pyritepirate/pyrite/
