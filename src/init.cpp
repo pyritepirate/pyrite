@@ -491,6 +491,14 @@ bool AppInit2(boost::thread_group& threadGroup)
         ShrinkDebugFile();
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     LogPrintf("Pyrite version %s\n", FormatFullVersion());
+#if (OPENSSL_VERSION_NUMBER < 0x10100000L)
+    LogPrintf("Using %s\n", SSLeay_version(SSLEAY_VERSION)); // log OpenSSL version
+#else
+    LogPrintf("Using %s\n", OpenSSL_version(OPENSSL_VERSION)); // log OpenSSL version
+#endif
+#ifdef ENABLE_WALLET
+    LogPrintf("Using %s\n", DbEnv::version(0, 0, 0)); // log Berkeley DB version
+#endif
     if (!fLogTimestamps)
         LogPrintf("Startup time: %s\n", DateTimeStrFormat("%x %H:%M:%S", GetTime()));
     LogPrintf("Default data directory %s\n", GetDefaultDataDir().string());
