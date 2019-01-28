@@ -13,7 +13,7 @@
 #### PoW Mining Algorithm: Sha256q
 #### PoW Block Reward: 88 Coins
 #### PoS Block Reward: 0 Coins + Fees
-#### Block Time: 10 Minutes (*effectively 5 minutes, since PoW and PoS blocks are targeted at 10 minutes*)
+#### Block Time: 10 Minutes
 #### Block Maturity: 200 Blocks
 #### Block Halving: Every 105120 Blocks
 #### Max supply: 10 Million*
