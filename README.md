@@ -1,4 +1,4 @@
-# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png">1.0.5
+# <img align="left" width="42" height="42" src="/src/qt/res/icons/pyrite-48.png">1.0.5 (Work In Progress - Do Not Use)
 
 [![Build Status](https://travis-ci.org/pyritepirate/pyrite.svg?branch=master)](https://travis-ci.org/pyritepirate/pyrite)
 
