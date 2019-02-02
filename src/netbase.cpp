@@ -755,6 +755,9 @@ bool CNetAddr::GetInAddr(struct in_addr* pipv4Addr) const
 
 bool CNetAddr::GetIn6Addr(struct in6_addr* pipv6Addr) const
 {
+    if (!IsIPv6()) {
+        return false;
+    }
     memcpy(pipv6Addr, ip, 16);
     return true;
 }
@@ -823,7 +826,7 @@ std::vector<unsigned char> CNetAddr::GetGroup() const
         nBits -= 8;
     }
     if (nBits > 0)
-        vchRet.push_back(GetByte(15 - nStartByte) | ((1 << nBits) - 1));
+        vchRet.push_back(GetByte(15 - nStartByte) | ((1 << (8 - nBits)) - 1));
 
     return vchRet;
 }
