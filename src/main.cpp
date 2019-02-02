@@ -1427,7 +1427,8 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
               SCRIPT_VERIFY_STRICTENC |
               SCRIPT_VERIFY_ALLOW_EMPTY_SIG |
               SCRIPT_VERIFY_FIX_HASHTYPE |
-              SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
+              SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY |
+              SCRIPT_VERIFY_CHECKSEQUENCEVERIFY;
 
     //// issue here: it doesn't know the version
     unsigned int nTxPos;
