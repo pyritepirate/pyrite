@@ -111,7 +111,7 @@ OBJS= \
     obj/crypter.o \
     obj/key.o \
     obj/init.o \
-    obj/bitcoind.o \
+    obj/pyrited.o \
     obj/keystore.o \
     obj/core.o \
     obj/main.o \
