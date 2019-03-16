@@ -1016,6 +1016,29 @@ void ClearDatadirCache()
               boost::filesystem::path());
 }
 
+string randomStrGen(int length) {
+    static string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    string result;
+    result.resize(length);
+    for (int32_t i = 0; i < length; i++)
+        result[i] = charset[rand() % charset.length()];
+
+    return result;
+}
+
+void createConf()
+{
+    srand(time(NULL));
+
+    ofstream pConf;
+    pConf.open(GetConfigFile().generic_string().c_str());
+    pConf << "rpcuser=user"
+            + randomStrGen(15)
+            + "\nrpcpassword=password"
+            + randomStrGen(15)
+            + "\nserver=1";
+    pConf.close();
+}
 boost::filesystem::path GetConfigFile()
 {
     boost::filesystem::path pathConfigFile(GetArg("-conf", "pyrite.conf"));
@@ -1028,7 +1051,13 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+
+    {
+        createConf();
+        new(&streamConfig) boost::filesystem::ifstream(GetConfigFile());
+        if(!streamConfig.good())
+            return;
+    }
 
     set<string> setOptions;
     setOptions.insert("*");
