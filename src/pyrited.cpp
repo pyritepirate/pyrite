@@ -47,7 +47,7 @@ bool AppInit(int argc, char* argv[])
         }
         ReadConfigFile(mapArgs, mapMultiArgs);
 
-        if (mapArgs.count("-?") || mapArgs.count("--help"))
+        if (mapArgs.count("-?") || mapArgs.count("-h") ||  mapArgs.count("-help"))
         {
             // First part of help message is specific to pyrited / RPC client
             std::string strUsage = _("Pyrite version") + " " + FormatFullVersion() + "\n\n" +
