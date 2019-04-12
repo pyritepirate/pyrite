@@ -60,10 +60,6 @@ enum
     // Verify CHECKLOCKTIMEVERIFY (BIP65)
     //
     SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 6),
-
-    // Verify CHECKSEQUENCEVERIFY (BIP112)
-    //
-    SCRIPT_VERIFY_CHECKSEQUENCEVERIFY = (1U << 7),
 };
 
 // Mandatory script verification flags that all new blocks must comply with for
@@ -75,8 +71,7 @@ static const unsigned int MANDATORY_SCRIPT_VERIFY_FLAGS = SCRIPT_VERIFY_NULLDUMM
                                                           SCRIPT_VERIFY_STRICTENC |
                                                           SCRIPT_VERIFY_ALLOW_EMPTY_SIG |
                                                           SCRIPT_VERIFY_FIX_HASHTYPE |
-                                                          SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY |
-                                                          SCRIPT_VERIFY_CHECKSEQUENCEVERIFY;
+                                                          SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
 
 // Standard script verification flags that standard transactions will comply
 // with. However scripts violating these flags may still be present in valid
