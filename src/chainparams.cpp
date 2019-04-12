@@ -84,10 +84,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xf86150037a562f5a61daa9ff6bffd6be7f83ac5697041030c18619976f8d8dda"));
 
         // Add seednodes below //
-        //  vSeeds.push_back(CDNSSeedData("yourdomain.com",  "seednode1.yourdomain.com"));
-        //  vSeeds.push_back(CDNSSeedData("yourdomain.com",  "seednode2.yourdomain.com"));
-        //  vSeeds.push_back(CDNSSeedData("yourdomain.com",  "seednode3.yourdomain.com"));
-        //  vSeeds.push_back(CDNSSeedData("yourdomain.com",  "seednode4.yourdomain.com"));
+        vSeeds.push_back(CDNSSeedData("seed.pyrite.pw",  "seed.pyrite.pw"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);

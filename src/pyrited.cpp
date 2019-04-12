@@ -38,7 +38,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
+        // If Qt is used, parameters/pyrite.conf are parsed in qt/bitcoin.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
@@ -47,9 +47,9 @@ bool AppInit(int argc, char* argv[])
         }
         ReadConfigFile(mapArgs, mapMultiArgs);
 
-        if (mapArgs.count("-?") || mapArgs.count("--help"))
+        if (mapArgs.count("-?") || mapArgs.count("-h") ||  mapArgs.count("-help"))
         {
-            // First part of help message is specific to bitcoind / RPC client
+            // First part of help message is specific to pyrited / RPC client
             std::string strUsage = _("Pyrite version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  pyrited [options]                     " + "\n" +
@@ -129,7 +129,7 @@ int main(int argc, char* argv[])
     bool fRet = false;
     fHaveGUI = false;
 
-    // Connect bitcoind signal handlers
+    // Connect pyrited signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
